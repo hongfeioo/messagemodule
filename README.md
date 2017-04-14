@@ -6,20 +6,27 @@ SendMessageModule
 本模块可用于发送邮件和短信。
 
 
-单独运行的方法
---------------------
-```bash
-python  messageMode.py    test123
-```
 
-
-被调用方法
+调用方法举例
 -----------------------------
 ```bash
+
+#!/usr/bin/python
+#coding=utf-8
+import time
+
 import messageMode
 
-messageMode.send_muti_sms(muti_phone,0,'hello baby log title',sms_msg)
-messageMode.sendtxtmail('hello baby mail title',0,mail_msg,muti_mail,begintime)
+
+muti_phone = '13521161889'
+muti_mail = 'yihf@liepin.com'
+arg_msg = 'baby,Be careful on the road'
+begintime =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+
+messageMode.send_muti_sms(muti_phone,0,'hello baby',arg_msg)
+messageMode.sendtxtmail('becare baby',0,arg_msg,muti_mail,begintime)
+print 'ok'
+
 ```
 
 

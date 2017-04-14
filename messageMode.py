@@ -50,7 +50,7 @@ def send_muti_sms(_fuc_muti_phone,_sms_off,_log_title,_content):
             request =  urllib2.Request(sms_send_string)
             try:
                 urllib2.urlopen(request)
-                os.system("echo "+sendtime+' '+_log_title+' '+every_phone+" message send to  push.lietou.com ok >> "+pythonlog)
+                os.system("echo "+sendtime+' '+_log_title+' '+every_phone+" message send to  push.xxx.com ok >> "+pythonlog)
             except urllib2.HTTPError,e:
                 os.system("echo "+sendtime+' '+_log_title+' '+every_phone+" message send HTTPError "+str(e.code)+str(e.reason)+" - -! >> "+pythonlog)
                 print "http Error:",e.code,e.reason
