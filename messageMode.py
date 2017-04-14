@@ -13,18 +13,25 @@ from email.mime.image import MIMEImage
 import urllib2
 
 
-#---init---
+#---init Time---
 begintime =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-sms_string = 'http://push.lietou.com/smsweb/send4vpn.do?clientId=60004&tel='
+
+#---receiver config------
 muti_phone='13521161889'
 muti_mail='yihf@liepin.com'
+
+#-----log file---------
 pythonlog ='/home/sms_mail.log'
 
 
+#---send mail server config--------
 sender = 'foo@bar.com'
 smtpserver = 'smtp.foo.com'
 username = 'foo@bar.com'
 password = 'foo'
+
+#-----message channel-----------------
+sms_string = 'http://xx.xxxxx.com/smsweb/send4vpn.do?clientId=60004&tel='    #according to your message channel ,may be you should change here
 #----------
 
 def send_muti_sms(_fuc_muti_phone,_sms_off,_log_title,_content):
@@ -36,7 +43,7 @@ def send_muti_sms(_fuc_muti_phone,_sms_off,_log_title,_content):
         _content = _content.replace(chr(34),"\"")                                           #replace " to \"
         if len(_content) > 230:
             _content = _content[:230]                                                       # cut the string to 300
-        sms_send_string = sms_string + every_phone+ '&context='+urllib2.quote(_content)
+        sms_send_string = sms_string + every_phone+ '&context='+urllib2.quote(_content)     #according to your message channel ,may be you should change here
         print sms_send_string
         #---if find null in the phone , pass this phone num
         if every_phone.find('null') == -1:
