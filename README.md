@@ -6,14 +6,14 @@ SendMessageModule
 本模块可用于发送邮件和短信。
 
 
-[单独运行的方法]
+单独运行的方法
 --------------------
 ```bash
 python  messageMode.py    test123
 ```
 
 
-[调用方法]
+被调用方法
 -----------------------------
 ```bash
 import messageMode
@@ -24,7 +24,7 @@ messageMode.sendtxtmail('hello baby mail title',0,mail_msg,muti_mail,begintime)
 
 
 
-[参数介绍]
+参数介绍
 --------------------
 send_muti_sms 函数参数
 > 1  手机号，当接受者为多人时用分号分割；</p>
