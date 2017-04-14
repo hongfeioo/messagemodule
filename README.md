@@ -44,8 +44,17 @@ sendtxtmail 函数参数
 
 邮箱,手机号,短信通道配置
 ----------------------------
-详见: messageMode.py  
-
+```bash
+vi messagemodule/messageMode.py 
+```
+>  muti_phone  接受报警短信的手机号，多手机号时用分号分割
+>  muti_mail   接受报警邮件的邮箱，多邮箱时用分号分割
+>  pythonlog   运行日志的输出位置
+>  sender      发件人的邮箱
+>  smtpserver  发件服务器
+>  username    发件邮箱用户名
+>  password    发件邮箱密码
+>  sms_string  短信通道字符串，这个需要你的公司有付费的短信通道,并配合修改第46行代码才可以使用。
 
 
 
