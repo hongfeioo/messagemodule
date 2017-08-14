@@ -18,8 +18,8 @@ import time
 import messageMode
 
 
-muti_phone = '13521161889'
-muti_mail = 'yihf@liepin.com'
+muti_phone = '135--------'
+muti_mail = 'yihf@li.com'
 arg_msg = 'baby,Be careful on the road'
 begintime =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
@@ -73,7 +73,7 @@ Python 2.7.5
 
 作者介绍
 ----------
-yihongfei  QQ:413999317   MAIL:yihf@liepin.com </p>
+yihongfei  QQ:413999317    </p>
 CCIE 38649
 
 
