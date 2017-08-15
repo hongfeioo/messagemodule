@@ -17,8 +17,8 @@ import urllib2
 begintime =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
 #---receiver config------
-muti_phone='13521161889'
-muti_mail='yihf@liepin.com'
+muti_phone='1352116----'
+muti_mail='yihf@li.com'
 
 #-----log file---------
 pythonlog ='/home/sms_mail.log'
@@ -71,6 +71,7 @@ def sendtxtmail(_subject,_mail_off,_msg,_fuc_mail,_begintime):
                 msg = MIMEText('<html>'+_msg+'</html>','html','utf-8')
                 msg['Subject'] =  _subject
                 msg['to'] = _receiver
+                msg['From'] = sender
                 smtp = smtplib.SMTP()
                 smtp.connect(smtpserver)
                 smtp.login(username, password)
